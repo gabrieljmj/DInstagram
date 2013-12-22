@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<title>DInstagram - Download all photos of a user</title>
+	<link rel="stylesheet" href="content/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="content/css/main.css" type="text/css" />
+	
+	<script type="text/javascript" src="content/js/jquery.1.8.1.min.js"></script>
+	<script src="content/js/jszip.js" type="text/javascript"></script>
+	<script src="content/js/otherfunctions.js" type="text/javascript"></script>
+	<script src="content/js/dap.js" type="text/javascript"></script>
+	
+</head>
+<body>
+	<header>
+		<div class="header-content">
+		<div class="logo"><img src="content/images/logo.png"></div>
+		<div id="user-info">
+			<div id="user-photo">
+				<img src="" width="200" height="200" />
+			</div>
+			<div id="user-name">
+				<span class="text-link-user">Undefined</a>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		</div>
+	</header>
+	<div style="clear: both;"></div>
+	
+	<div class="content" style="width: 100%;">
+		<div id="button-tabs" style="width: 199px; margin: 0 auto;">
+			<div class="btn-group">
+				<button type="button" class="btn btn-default" id="tabs-img" style="width: 99.5px;">All images</button>
+				<button type="button" class="btn btn-default" id="tabs-vd" style="width: 99.5px;">All videos</button>
+			</div>
+		</div>
+		<div id="totalMediasImages" style="display: none;"></div>
+		<div id="totalMediasVideos" style="display: none;"></div>
+		<div id="totalMediasSelecteds"></div>
+		<div id="media-images">
+			<div class="button-download-all">
+				<div id="creating-zip"><img src="content/images/load-2.gif" height="22px" /><br /><span style="font-size: 12px;">Creating ZIP file</span></div>
+				<select id="format-all" class="form-control" style="margin-left: 0px;display: inline; width: 200px; -webkit-border-radius: 4px 0px 0px 0px;" disabled="disabled">
+					<option value="jpg">JPEG (Default)</option>
+					<option value="png">PNG</option>
+					<option value="gif">GIF</option>
+				</select>
+				<select id="format-selecteds" class="form-control" style="margin-left: -5px; display: inline; width: 284px; -webkit-border-radius: 0px 4px 0px 0px;" disabled="disabled">
+					<option value="jpg">JPEG (Default)</option>
+					<option value="png">PNG</option>
+					<option value="gif">GIF</option>
+				</select>
+				<br />
+				<a href="" id="blob-img"><button class="btn btn-danger" disabled="disabled" id="blob-button-images" style="-webkit-border-radius: 0px 0px 0px 4px; margin-right: -4px;">DOWNLOAD ALL PHOTOS</button></a>
+				<a href="#" id="blob-img-selecteds"><button class="btn btn-danger" disabled="disabled" id="blob-button-images-selecteds" style="-webkit-border-radius: 0px 0px 4px 0px;">DOWNLOAD ALL PHOTOS SELECTEDS</button></a>
+				<br />
+				<span style="font-size: 12px;">All photos will be saved in a ZIP file</span>
+			</div>
+			<div id="error-images" class="error" style="display: none; width: 199px; margin: 0 auto; text-align: center;"></div>
+		</div>
+		<div id="media-videos" style="display: none;">
+			<div class="button-download-all">
+				<a href="" id="blob-video"><button class="btn btn-danger" disabled="disabled" id="blob-button-videos" style="-webkit-border-radius: 4px 0px 0px 4px; margin-right: -4px;">DOWNLOAD ALL VIDEOS</button></a>
+				<a href="" id="blob-video-selecteds"><button class="btn btn-danger" disabled="disabled" id="blob-button-videos-selecteds" style="-webkit-border-radius: 0px 4px 4px 0px;">DOWNLOAD ALL VIDEOS SELECTEDS</button></a>
+				<br />
+				<span style="font-size: 12px;">All videos will be saved in a ZIP file</span>
+			</div>
+			<div id="error-videos" class="error" style="width: 199px; margin: 0 auto; text-align: center;">Resource in development</div>
+		</div>
+		<div id="error" class="error" style="display: none; width: 199px; margin: 0 auto; text-align: center;"></div>
+		<div id="load">
+			<div class="bg"></div>
+				<div class="modal2">
+					<div id="countdown" style="display: none;"></div>
+					<div class="progress progress-striped active" style="width: 199px; margin: 0 auto;">
+						<div class="progress-bar progress-bar-danger"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+							<span class='sr-only'>Loading images and videos</span>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div id="download-options" style="display: none;">
+			<div class="bg"></div>
+			<div class="modal2">
+				<div id="countdown" style="display: none;"></div>
+				<div style="width: 199px;">
+					<div class="modal-my">
+						Images format:
+						<select class="form-control" id="format-imgs">
+							<option value="jpg">JPEG (Default)</option>
+							<option value="png">PNG</option>
+							<option value="gif">GIF</option>
+						</select>
+						Images size:
+						<select class="form-control" id="size-imgs">
+							<option value="7">Big</option>
+							<option value="6">Medium</option>
+							<option value="5">Small</option>
+						</select>
+						<button class="btn btn-success" style="margin-top: 5px;width: 177px;" id="format-imgs-btn">Ok!</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

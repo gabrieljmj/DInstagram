@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>DInstagram</title>
+	
+	<link rel="stylesheet" href="content/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="content/css/main.css" type="text/css" />
+	
+	<script type="text/javascript" src="content/js/jquery.1.8.1.min.js"></script>
+	<script type="text/javascript" src="content/js/main.js"></script>
+	<script type="text/javascript" src="content/js/bootstrap.js"></script>
+</head>
+<body>
+	<header><img src="content/images/logo.png"></header>
+	<div class="content">
+		<div id="instagram-options">
+			<input type="url" placeholder="Instagram's URL or username's Instagram" class="form-control" style="width: 100%;float:left;-webkit-border-radius: 3px 3px 0px 0px" id="user-or-url" title="Instagram's URL or username's Instagram" />
+			<!--<button class="btn btn-danger" style="-webkit-border-radius: 0px 0px 0px 3px;width: 100px;float: left;" id="generate-by-url">Generate</button>
+			<button class="btn btn-danger" style="-webkit-border-radius: 0px 0px 3px 0px;width: 100px;" id="generate-by-url">Generate</button>-->
+			<div class="btn-group">
+				  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" style="-webkit-border-radius: 0px 0px 4px 4px;width: 200px;">
+					Action <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="generate-by-url">Generate by Instagram's URL</a></li>
+					<li><a href="#" id="list-all-medias">List all user's photos</a></li>
+				  </ul>
+			</div>
+		</div>
+		<center><span class="default-font">or</span></center>
+		<div id="media_info"></div>
+		<div id="error" class="error" style="display: none;"></div>
+		<div id="load" style="display: none;">
+			<img src="content/images/load.gif" />
+		</div>
+	</div>
+	<footer><center><a href="#report" id="report-bug" class="link2">Report bug</a> | <a href="#developer" id="developer" class="link2">Developer</a> | <a href="#size-examples" id="size-examples" class="link2">Image size examples</a></center></footer>
+</body>
+</html>

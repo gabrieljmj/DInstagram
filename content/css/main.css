@@ -1,0 +1,29 @@
+body{ font-family: Arial; background: #eaeaea; padding: 5px; }
+.content{ width: 200px; }
+.error{ border: 1px red solid; border-radius: 3px; -webkit-border-radius: 3px; padding: 5px; background: #ffebe8; text-align: center; color: #333; font-size: 14px;}
+.error{ font-size: 12px; }
+.button{ color: white; border: none; padding: 5px; background: #990000; font-weight: bold; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; cursor: pointer; }
+.button:hover{ background: red; }
+.link1{ text-decoration: none; color: #333; }
+.link1:hover{ color: black; }
+.link2{ font-size: 12px; color: #990000; text-decoration: none; }
+footer{ margin-top: 3px; }
+.link2:hover{ color: red; }
+.input1{ border: 1px solid #ccc; padding: 5px; border-radius: 3px; -webkit-border-radius: 3px; }
+a:hover{ text-decoration: none; }
+.download_link{ padding: 5px; text-align: center; }
+.instagram-options{ margin-top: 5px; }
+.media-li{ width: 306px; margin: 0px 10px 10px 0px; float: left; }
+#media-images{ max-width: 1294px; margin: 0 auto; }
+#media-videos{ max-width: 1264px; margin: 0 auto; }
+.button-download{ padding: 5px; text-align: center; }
+.button-download-all{ padding: 5px; text-align: center; }
+.logo{ width: 200px; height: 62px; margin: 0 auto; float: left; border-right: 1px solid #ccc; }
+.bg{ filter: alpha(opacity=80); opacity: 0.80; background: white; position: fixed; width: 100%; height: 100%; top: 0; left: 0; bottom: 0; eight: 0; z-index: 1400; }
+.modal2{ width: 199px; height: 30x; z-index: 1500; position: fixed; left:50%; top:50%; margin-left:-100px; margin-top:-40px; }
+#user-info{ width: 200px; height: 62px; padding: 5px; float: left; }
+#user-photo{ float: left; margin-right: 5px; }
+.header-content{ width: 410px; margin: 0 auto; margin-bottom: 10px; }
+.format2{ margin-top: 5px; }
+input, select, button{ cursor: pointer; }
+.modal-my{ padding: 10px; border: 1px solid #ccc; border-radius: 4px; background: #fff; }

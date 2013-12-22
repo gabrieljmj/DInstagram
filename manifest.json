@@ -1,0 +1,23 @@
+{
+	"name": "DInstagram",
+	"version": "1.2.4.3",
+	"manifest_version": 2,
+	"description": "Download photos and videos from Instagram quickly and easily!",
+	"icons": {
+		"16": "content/images/icons/16.png",
+		"48": "content/images/icons/48.png",
+		"128": "content/images/icons/128.png"
+	},
+    "browser_action": {
+		"default_icon": "content/images/icons/16.png",
+		"default_popup": "index.html"
+    },
+	"permissions": [
+	"tabs",
+	"http://*/*",
+	"https://*/*"
+	],
+	"minimum_chrome_version": "20.0.0.0",
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://api.instagram.com/; object-src 'self'",
+	"author": "@GabrielJMJ"
+}
