@@ -83,63 +83,63 @@ function urlDecode(string, overwrite){
 }
 
 function jsGet(param){
-	var wl = window.location.href;
-	var params = urlDecode(wl.substring(wl.indexOf("?")+1));
-	return(params[param]);
+    var wl = window.location.href;
+    var params = urlDecode(wl.substring(wl.indexOf("?")+1));
+    return(params[param]);
 }
 
 /* SLEEP */
 function sleep(milliseconds) {
-	document.devCheater.sleep(milliSeconds);
+    document.devCheater.sleep(milliSeconds);
 }
 
 /* ARRAY_SEARCH */
 function verifyIfElementExists(array, element){
-	var results = 0;
-	for(i = 0; i < array.length; i++){
-		if(array[i] == element){
-			results += 1;
-		}
-	}
-	if(results == 0){
-		return false;
-	}else{
-		return true;
-	}
+    var results = 0;
+    for(i = 0; i < array.length; i++){
+        if(array[i] == element){
+            results += 1;
+        }
+    }
+    if(results == 0){
+        return false;
+    }else{
+        return true;
+    }
 }
 
 /* TABS */
 function tabs(){
-	var imgBtn = '#tabs-img';
-	var vdBtn = '#tabs-vd';
-	var imgsDiv = '#media-images';
-	var vdsDiv = '#media-videos';
-	$(imgBtn).attr('disabled', 'disabled');
-	$(imgBtn).click(function(){
-		if($(imgsDiv).is(':visible') == false){
-			$(vdBtn).removeAttr('disabled');
-			$(imgsDiv).show();
-			$(vdsDiv).hide();
-			$(imgBtn).attr('disabled', 'disabled');
-		}
-		return false;
-	});
-			
-	$(vdBtn).click(function(){
-		if($(vdsDiv).is(':visible') == false){
-			$(imgBtn).removeAttr('disabled');
-			$(vdsDiv).show();
-			$(imgsDiv).hide();
-			$(vdBtn).attr('disabled', 'disabled');
-		}
-		return false;
-	});
+    var imgBtn = '#tabs-img';
+    var vdBtn = '#tabs-vd';
+    var imgsDiv = '#media-images';
+    var vdsDiv = '#media-videos';
+    $(imgBtn).attr('disabled', 'disabled');
+    $(imgBtn).click(function(){
+        if($(imgsDiv).is(':visible') == false){
+            $(vdBtn).removeAttr('disabled');
+            $(imgsDiv).show();
+            $(vdsDiv).hide();
+            $(imgBtn).attr('disabled', 'disabled');
+        }
+        return false;
+    });
+            
+    $(vdBtn).click(function(){
+        if($(vdsDiv).is(':visible') == false){
+            $(imgBtn).removeAttr('disabled');
+            $(vdsDiv).show();
+            $(imgsDiv).hide();
+            $(vdBtn).attr('disabled', 'disabled');
+        }
+        return false;
+    });
 }
 
 $.fn.countdown = function(seconds){
-	$(this).html(seconds);
-	var seconds = $(this).html();
-	setInterval(function(){
-		$(this).html(seconds--);
-	}, 1000);
+    $(this).html(seconds);
+    var seconds = $(this).html();
+    setInterval(function(){
+        $(this).html(seconds--);
+    }, 1000);
 }

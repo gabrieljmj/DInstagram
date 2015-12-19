@@ -24,6 +24,3 @@ a:hover{ text-decoration: none; }
 #user-info{ width: 200px; height: 62px; padding: 5px; float: left; }
 #user-photo{ float: left; margin-right: 5px; }
 .header-content{ width: 410px; margin: 0 auto; margin-bottom: 10px; }
-.format2{ margin-top: 5px; }
-input, select, button{ cursor: pointer; }
-.modal-my{ padding: 10px; border: 1px solid #ccc; border-radius: 4px; background: #fff; }
