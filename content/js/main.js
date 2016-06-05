@@ -24,7 +24,7 @@ $(document).ready(function(){
                     var mediaType = data.match(/<meta property="og:type" content=\"([^\"]*)\" \/>/);
                     if(mediaType[1] == 'video'){
                         var mediaURLComplete = data.match(/<meta property="og:video" content=\"(.*)\\?.*\"/);
-                        console.log(mediaURLComplete);
+   
                         var mediaUrlBig = mediaURLComplete[1];
                         var mediaUrlMedium = mediaURLComplete[1].replace('101.mp4', '102.mp4');
                         

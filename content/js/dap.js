@@ -27,7 +27,7 @@ $(document).ready(function(){
                             var videoUrl = data.data[i].videos.standard_resolution.url;
                             var videoNameComplete = videoUrl.split('/');
                             var videoName = videoNameComplete[3];
-                                    
+
                             $('#media-videos').append('<div class="media-li"><video width="306" height="306" controls><source src="' + videoUrl + '" type="video/mp4"></video><div class="button-download"><a href="' + videoUrl + '" download="' + videoName + '"><button class="btn btn-success" style="-webkit-border-radius: 0px 4px 4px 0px;">DOWNLOAD</button></a></div><canvas style="display: none;" width= "612" height="612" id="canvasVideo' + totalMediasImages + '"></canvas></div>');
                         }
                     }
@@ -63,7 +63,6 @@ $(document).ready(function(){
                     $('#creating-zip').hide();
                 }else{
                     var user_id = data.data[0].id;
-                    console.log('https://api.instagram.com/v1/users/' + user_id + '/media/recent/');
                     var profilePicture = data.data[0].profile_picture;
                     $('#user-photo').html('<img src="' + profilePicture + '" height="50" />');
                     $('.text-link-user').html('@' + jsGet('user') + '<br /><a href="http://instagram.com/' + jsGet('user') + '"<span class="label label-primary" style="background-color: #428bca;">View profile</span></a>');

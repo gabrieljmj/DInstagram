@@ -15,9 +15,9 @@
    "manifest_version": 2,
    "minimum_chrome_version": "20.0.0.0",
    "name": "DInstagram",
-   "permissions": [ "tabs", "activeTab", "http://*/*", "https://*/*", "contextMenus" ],
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.3.10",
+   "version": "1.3.11",
    "content_scripts": [
       {
          "matches": ["http://instagram.com/*", "https://instagram.com/*", "http://www.instagram.com/*", "https://www.instagram.com/*"],
