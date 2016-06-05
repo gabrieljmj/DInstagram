@@ -9,6 +9,7 @@ $(document).ready(function(){
             dataType: "jsonp",
             success: function( data ){
                 var nextUrl = data.pagination.next_url;
+
                 if(typeof nextUrl == 'undefined'){
                     $('#load').hide();
                 }else{
@@ -43,7 +44,7 @@ $(document).ready(function(){
             url: 'https://api.instagram.com/v1/users/search',
             data: {
                 q: jsGet('user'),
-                client_id: '0b77c4f6e9894c9c957ffdbc8051bcdd'
+                access_token: '243029514.0b77c4f.06a3fd0ed5db4e1caf0665086e2930b8'
             },
             dataType: "jsonp",
             error: function(data){
@@ -62,6 +63,7 @@ $(document).ready(function(){
                     $('#creating-zip').hide();
                 }else{
                     var user_id = data.data[0].id;
+                    console.log('https://api.instagram.com/v1/users/' + user_id + '/media/recent/');
                     var profilePicture = data.data[0].profile_picture;
                     $('#user-photo').html('<img src="' + profilePicture + '" height="50" />');
                     $('.text-link-user').html('@' + jsGet('user') + '<br /><a href="http://instagram.com/' + jsGet('user') + '"<span class="label label-primary" style="background-color: #428bca;">View profile</span></a>');
@@ -69,7 +71,7 @@ $(document).ready(function(){
                         type: "GET",
                         url: 'https://api.instagram.com/v1/users/' + user_id + '/media/recent/',
                         data: {
-                            access_token: '243029514.5b9e1e6.0b488c6d2bc94c85943f91ed329ae49c'
+                            access_token: '243029514.0b77c4f.06a3fd0ed5db4e1caf0665086e2930b8'
                         },
                         dataType: "jsonp",
                         success: function( data ){
@@ -138,8 +140,8 @@ $(document).ready(function(){
                                     var urlEncoded = dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
                                     var fileNameComplete = $('#a' + i).attr('src');
                                     var fileNameSeparate = fileNameComplete.split('/');
-                                    var fileName = end(fileNameSeparate);
-                                        
+                                    var fileName = end(fileNameSeparate).split('?')[0];
+
                                     zip.file(fileName, urlEncoded, {base64: true});
                                 }
                                 var blobLink = document.getElementById('blob-img');
@@ -161,7 +163,7 @@ $(document).ready(function(){
                                             var urlEncoded = dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
                                             var fileNameComplete = $('#a' + ids[i]).attr('src');
                                             var fileNameSeparate = fileNameComplete.split('/');
-                                            var fileName = end(fileNameSeparate);
+                                            var fileName = end(fileNameSeparate).split('?')[0];
                                             
                                             zip.file(fileName, urlEncoded, {base64: true});
                                         }

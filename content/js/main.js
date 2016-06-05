@@ -23,8 +23,8 @@ $(document).ready(function(){
                     $('#load').hide();
                     var mediaType = data.match(/<meta property="og:type" content=\"([^\"]*)\" \/>/);
                     if(mediaType[1] == 'video'){
-                        var mediaURLComplete = data.match(/<meta property="og:video" content=\"([^\"]*)\" \/>/);
-                        
+                        var mediaURLComplete = data.match(/<meta property="og:video" content=\"(.*)\\?.*\"/);
+                        console.log(mediaURLComplete);
                         var mediaUrlBig = mediaURLComplete[1];
                         var mediaUrlMedium = mediaURLComplete[1].replace('101.mp4', '102.mp4');
                         
@@ -42,7 +42,7 @@ $(document).ready(function(){
                         
                         var downloadLinks = '<li><a href="' + mediaUrlBig + '" id="download-big" download="' + fileNameBig + '">Big size</a></li><li><a href="' + mediaUrlMedium + '" id="download-low-quality" download="' + fileNameMedium + '">Medium size</a></li>';
                     }else{
-                        var mediaURLComplete = data.match(/<meta property="og:image" content=\"([^\"]*)\" \/>/);
+                        var mediaURLComplete = data.match(/<meta property="og:image" content=\"(.*)\?.*\"/);
                         var mediaUrlBig = mediaURLComplete[1];
                         
                         var mediaUrlMedium = mediaURLComplete[1].replace('8.jpg', '6.jpg');
